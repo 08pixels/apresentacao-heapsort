@@ -29,7 +29,7 @@
         padding-left: 15px !important;
         border-left: 2px black solid !important;
       }
-      
+
       .box-blockquote{
         text-align: justify !important;
         padding-left: 5% !important;
@@ -50,7 +50,10 @@
       .blockquote-list{
         border-left: none !important;
       }
-      
+      p {
+        text-align: left;
+        text-indent: 10%; 
+      }
       table{
         font-size: 15pt !important;
         /* border: 1px solid #ddd !important; */
@@ -127,16 +130,14 @@
           
           <section>
             <div>
-              <h3> Características </h3>
+              <h3 class="title"> Características </h3>
               <div>
-                  <ul>
-                    <li class="fragment"> Ordenação por seleção </li>
-                    <li class="fragment"> Heap binária </li>
-                    <li class="fragment"> In-place </li>
-                    <li class="fragment"> Instável </li>
-                    <li class="fragment"> Complexidade O(n log n) </li>
-                    <li class="fragment"> Fácil implementação </li>
-                  </ul>
+                    <p class="fragment"> &raquo; Ordenação por seleção </p>
+                    <p class="fragment"> &raquo; Heap binária </p>
+                    <p class="fragment"> &raquo; In-place </p>
+                    <p class="fragment"> &raquo; Instável </p>
+                    <p class="fragment"> &raquo; Complexidade O(n log n) </p>
+                    <p class="fragment"> &raquo; Fácil implementação </p>
               </div>
             </div>
           </section>
@@ -168,11 +169,11 @@
               </section>
           <section>
             <div>
-              <h3> Conectividade </h3>
-              <ul>
-                <li class="fragment"> Filho esquerdo: 2 * i </li>
-                <li class="fragment"> Filho direito: 2 * i + 1</li>
-              </ul>
+              <h3 class="title"> Conectividade </h3>
+
+              <p class="fragment"> &raquo; <i> Filho esquerdo: 2 &times; i </i> </p>
+              <p class="fragment"> &raquo; <i> Filho direito: 2 &times; i + 1 </i> </p>
+
               <img class="fragment" src="./images/linked.png" width="800"> </img>
             </div>
           </section>
@@ -214,19 +215,18 @@
 
           <section>
             <h5 class="title"> Testes </h5>
+              <div class="fragment">
+              <p> &raquo; 100 </p>
+              <p> &raquo; 1.000 </p>
+              <p> &raquo; 1.000.000 </p>
+            </div>
 
-            <ul>
-              <li> 100 </li>
-              <li> 1.000 </li>
-              <li> 1.000.000 </li>
-            </ul>
-
-            <h5 class="title"> Disposição </h5>
-            <ul>
-              <li> Ascendente </li>
-              <li> Descendente </li>
-              <li> Aleatória </li>
-            </ul>
+            <div class="fragment">
+              <h5 class="title"> Disposição </h5>
+              <p> &raquo; Ascendente </p>
+              <p> &raquo; Descendente </p>
+              <p> &raquo; Aleatória </p>
+            </div>
           </section>
 
           <section>
