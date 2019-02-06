@@ -1,0 +1,10 @@
+
+.icons{
+  font-family: font !important;
+}
+
+
+@font-face {
+  font-family: font;
+  src: url(../fonts/fontawesome.ttf);
+}

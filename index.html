@@ -1,0 +1,236 @@
+<html>
+
+  <head>
+    <meta charset="utf-8">
+	
+    <link rel="stylesheet" href="./revealjs/css/reveal.css">
+    <link rel="stylesheet" href="./revealjs/css/theme/night.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <style media="screen">
+      .title{
+        text-align: justify;
+      }
+  
+      .title-slide{
+        text-transform: none !important;
+      }
+
+      .panel{
+        background-color: rgb(228, 228, 237);
+        padding: 20px !important;
+        border-radius: 10px;
+      }
+
+      .style-image{
+        border-style: none !important;
+        box-shadow: none !important;
+        background-color: transparent !important;
+        box-shadow: -2px 5px 20px #333 !important;
+      }
+
+      .subtitle{
+        padding-left: 15px !important;
+      }
+      
+      .box-blockquote{
+        text-align: justify !important;
+        padding-left: 5% !important;
+        margin-bottom: 5% !important;
+      }
+
+      .title-blockquote{
+        font-size: 30pt !important;
+        text-transform: none !important;
+        color: rgba(0, 0, 0, 0.8) !important;
+      }
+
+      .blockquote{
+        padding-left: 2% !important; 
+        margin-left: 5%  !important; 
+        border-left: 1px rgba(0, 0, 0, 0.8) solid !important;
+        font-size: 20pt !important;
+        /* color: rgba(0, 0, 0, 0.6) !important; */
+      }
+
+      .blockquote-list{
+        border-left: none !important;
+      }
+      
+      table{
+        font-size: 15pt !important;
+        /* border: 1px solid #ddd !important; */
+        /* width: 100%; */
+      }
+
+      .table th {
+        background-color: rgb(32, 32, 32);
+        color: white;
+      }
+
+      .table tr:hover {background-color:#d6d6d6;}
+      
+      .table td{    
+        border: 1px solid  rgb(32, 32, 32, 0.5) !important;
+        text-align: left !important;
+      }
+
+      .table{
+        box-shadow: -2px 5px 20px #333 !important;
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        
+        <!-- first slide -->
+        <section>
+          <div class="title">
+            <h1> HeapSort </h1>
+             <div class="subtitle">
+               <span> Algoritmo de ordenação </span>
+            </div>
+          </div>
+        </section>
+
+        <!-- team -->
+        <section>
+          <table style="color:rgb(29, 35, 38); font-size:20pt;">
+            <tr>
+              <td>
+                <div class="panel">
+                  <p><span class="icons">&#xf2b9; </span> Erick Oliveira de Souza </p>
+                  <p><span class="icons">&#xf19d; </span> Universidade Federal de Alagoas </p>
+                  <p><span class="icons">&#xf0e0; </span> erick.souza@arapiraca.ufal.br </p>
+                </div>
+              </td>
+
+              <td>
+                <div class="panel">
+                  <p><span class="icons">&#xf2b9; </span> João Batista G. Silva </p>
+                  <p><span class="icons">&#xf19d; </span> Universidade Federal de Alagoas </p>
+                  <p><span class="icons">&#xf0e0; </span> joao.gomes@arapiraca.ufal.br </p>
+                </div>
+              </td>
+
+              <td>
+                <div class="panel">
+                  <p><span class="icons">&#xf2b9; </span> Luiz R. M. da Silva </p>
+                  <p><span class="icons">&#xf19d; </span> Universidade Federal de Alagoas </p>
+                  <p><span class="icons">&#xf0e0; </span> luiz.marques@arapiraca.ufal.br </p>
+                </div>
+              </td>
+
+            </tr>
+          </table>
+
+        </section>
+
+        <!-- introduction -->
+        <section>
+          <section>
+            <h2 class="title-slide"> Introdução </h2>
+          </section>
+          
+          <section>
+            <div>
+              <h3> Características </h3>
+              <div>
+                  <ul>
+                    <li class="fragment"> Ordenação por seleção </li>
+                    <li class="fragment"> Heap binária </li>
+                    <li class="fragment"> In-place </li>
+                    <li class="fragment"> Instável </li>
+                    <li class="fragment"> Complexidade O(n log n) </li>
+                    <li class="fragment"> Fácil implementação </li>
+                  </ul>
+              </div>
+            </div>
+          </section>
+        </section>
+
+        <!-- tecnologies used -->
+        <section>
+          <section>
+            <h2 class="title-slide"> O algoritmo </h2>
+          </section>
+
+          <section>
+            <div>
+                <h3> Passos gerais do algoritmo </h3>
+
+                <div>
+                    <ul>
+                      <li class="fragment"> Construir Heap máximo com os elementos do vetor </li>
+                      <li class="fragment"> Troque o valor da raiz com o do último nó no heap e decremente uma unidade do tamanho do heap. Finalmente, monte a raiz da árvore. </li>
+                      <li class="fragment"> Repetir o passo anterior até que o tamanho do heap seja maior que 1 </li>
+                    </ul>
+                </div>
+            </div>
+          </section>
+
+        </section>
+        <section>
+            <section>
+                <h2 class="title-slide"> Modelagem </h2>
+              </section>
+          <section>
+            <div>
+              <h3> Conectividade </h3>
+              <ul>
+                <li class="fragment"> Filho esquerdo: 2 * i </li>
+                <li class="fragment"> Filho direito: 2 * i + 1</li>
+              </ul>
+              <img class="fragment" src="./images/linked.png" width="800"> </img>
+            </div>
+          </section>
+
+          <section>
+              <h3> A árvore </h3> 
+              <img class="fragment" src="./images/tree.png" width="920" height="400"> </img>
+            </section>
+
+        </section>
+
+        <section>
+          <section>
+                <h2 class="title-slide">Implementação</h3>
+          </section>
+
+          <section>
+            <div>
+              <h3> Heap Máximo </h3>
+            </div>
+          </section>
+
+          <section data-background="./images/maxheap.png" data-background-transition="zoom"></section>
+
+          <section>
+              <div>
+                <h3> HeapSort </h3>
+              </div>
+            </section>
+
+            <section data-background="./images/heapsort.png" data-background-transition="zoom" ></section>
+
+        </section>
+
+      </div>
+    </div>
+
+    <script src="./revealjs/lib/js/head.min.js"></script>
+    <script src="./revealjs/js/reveal.js"></script>
+    <script type="text/javascript">
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        center: true,
+        transition: 'slide'
+      })
+    </script>
+  </body>
+
+
+</html>
